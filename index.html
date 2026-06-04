@@ -23,15 +23,13 @@
             line-height: 1.7;
         }
 
-        /* Премиум Банер с генериран сиво-златен планински филтър */
+        /* Луксозен Банер - Естествена снимка в сиво и златно */
         header {
-            background: linear-gradient(rgba(35, 39, 42, 0.75), rgba(35, 39, 42, 0.75)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(35, 39, 42, 0.5), rgba(35, 39, 42, 0.6)), url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
             color: white;
             text-align: center;
-            padding: 160px 20px;
+            padding: 170px 20px;
             letter-spacing: 2px;
-            /* Дизайнерски филтър за напасване към сиво-златната тема */
-            backdrop-filter: sepia(30%) hue-rotate(10deg);
         }
 
         header h1 {
@@ -125,7 +123,7 @@
             font-weight: 600;
         }
 
-        /* Луксозна Сетка за стаите (Grid) */
+        /* Сетка за стаите (Оригинални цветове на снимките) */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -151,12 +149,6 @@
             width: 100%;
             height: 240px;
             object-fit: cover;
-            filter: grayscale(10%);
-            transition: all 0.4s ease;
-        }
-
-        .card:hover img {
-            filter: grayscale(0%);
         }
 
         .card-content {
@@ -199,7 +191,7 @@
             font-size: 1.2rem;
         }
 
-        /* Изчистена Златна Таблица за Цени */
+        /* Златна Таблица за Цени */
         .table-wrapper {
             overflow-x: auto;
             margin-top: 30px;
@@ -239,11 +231,26 @@
             padding-left: 10px;
         }
 
-        /* Секция Контакти */
+        /* Секция Контакти и Дизайнерски контейнер за Картата */
         .contacts-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
+            align-items: center;
+        }
+
+        .map-container {
+            border: 1px solid #eef0f1;
+            border-left: 4px solid var(--gold);
+            padding: 10px;
+            background: #ffffff;
+            border-radius: 6px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+        }
+
+        .map-container iframe {
+            display: block;
+            border-radius: 4px;
         }
 
         .contact-info p {
@@ -295,7 +302,7 @@
 </head>
 <body>
 
-    <!-- Елитен банер с модифициран сиво-златен планински изглед -->
+    <!-- Елитен банер с нова, истинска златно-сива планинска снимка -->
     <header>
         <h1>Хотел <span>Планински Рай</span></h1>
         <p>Премиум Спа & Релакс • Сезон 2026</p>
@@ -319,7 +326,7 @@
             <p>Тук времето забавя своя ход, за да ви позволи да се насладите на кристален въздух, първокласно гостоприемство и релаксиращи процедури през всеки сезон от годината.</p>
         </section>
 
-        <!-- Настаняване -->
+        <!-- Настаняване (Върнати оригинални цветове) -->
         <section id="accommodation">
             <h2>Пространства за Настаняване</h2>
             <p>Всички стаи и апартаменти се отличават с модерен уют, тераси с вдъхновяваща планинска панорама, собствен санитарен възел, хладилник, телевизор с цифрова телевизия и високоскоростен Wi-Fi.</p>
@@ -421,7 +428,7 @@
             <p style="font-size: 0.9rem; color: #7f8c8d; margin-top: 20px;">* Деца до 6 години се настаняват безплатно без допълнително легло. Доплащането за допълнително легло е 25.00 лв. на ден.</p>
         </section>
 
-        <!-- Контакти -->
+        <!-- Контакти с новата луксозна рамка на картата -->
         <section id="contacts">
             <h2>Локация & Информация</h2>
             <div class="contacts-wrapper">
@@ -430,8 +437,8 @@
                     <p><strong>🚗 Достъп:</strong> На разположение на гостите има безплатен, денонощно достъпен паркинг директно пред комплекса.</p>
                     <p><strong>🌲 Туризъм:</strong> Локацията позволява бърз достъп до забележителности като Троянския манастир, занаятчийското изложение в Орешак и множество маркирани екопътеки в Стара Планина.</p>
                 </div>
-                <div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2930.345686036814!2d24.4170366!3d42.8444391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a9939fd9ca3059%3A0x6b4fb7cb1559be6d!2z0KXQvtGC0LXQuyAi0J_Qu9Cw0L3QuNC90bA50LrQuCDRgNCw0Lki!5e0!3m2!1sbg!2sbg!4v1710000000000!5m2!1sbg!2sbg" width="100%" height="320" style="border:0; filter: contrast(95%) grayscale(5%); border-radius: 2px;" allowfullscreen="" loading="lazy"></iframe>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2930.345686036814!2d24.4170366!3d42.8444391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a9939fd9ca3059%3A0x6b4fb7cb1559be6d!2z0KXQvtGC0LXQuyAi0J_Qu9Cw0L3QuNC90bA50LrQuCDRgNCw0Lki!5e0!3m2!1sbg!2sbg!4v1710000000000!5m2!1sbg!2sbg" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </section>
@@ -445,7 +452,7 @@
         <div class="team-members">
             Данаил Русев • Георги Славков • Андрей Иванов • Виктория Шопова
         </div>
-        <p style="font-size: 0.8rem; color: #64696d; margin-top: 30px;">© 2026 Всички права над оригиналните данни и дестинацията принадлежат на семеенホテル „Планински рай“.</p>
+        <p style="font-size: 0.8rem; color: #64696d; margin-top: 30px;">© 2026 Всички права над оригиналните данни и дестинацията принадлежат на семеен хотел „Планински рай“.</p>
     </footer>
 
 </body>
