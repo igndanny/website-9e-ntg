@@ -3,374 +3,447 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Семеен Хотел „Планински Рай“ - с. Шипково</title>
+    <title>Wellness Хотел „Планински Рай“</title>
     <style>
-        /* Общи стилове и шрифтове */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f7f9f7;
-            line-height: 1.6;
+        /* Базови Настройки и Модерни Шрифтове */
+        :root {
+            --dark-grey: #23272a;
+            --light-grey: #f4f5f6;
+            --gold: #c5a880;
+            --gold-hover: #b39369;
+            --text-color: #3f4448;
         }
 
-        /* Главно заглавно пано (Hero Banner) */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--light-grey);
+            line-height: 1.7;
+        }
+
+        /* Премиум Банер (Hero Section) */
         header {
-            background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(35, 39, 42, 0.7), rgba(35, 39, 42, 0.7)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
             color: white;
             text-align: center;
-            padding: 140px 20px;
+            padding: 160px 20px;
+            letter-spacing: 2px;
         }
 
         header h1 {
             margin: 0;
-            font-size: 3.5rem;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
-            font-weight: 700;
+            font-size: 3.8rem;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        header h1 span {
+            font-weight: 600;
+            color: var(--gold);
         }
 
         header p {
-            font-size: 1.5rem;
-            margin-top: 15px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-            font-style: italic;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            text-transform: uppercase;
+            color: #d1d5db;
+            letter-spacing: 4px;
         }
 
-        /* Навигационно меню */
+        /* Минималистично Меню */
         nav {
-            background-color: #2E7D32;
+            background-color: var(--dark-grey);
             position: sticky;
             top: 0;
             z-index: 1000;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-bottom: 2px solid var(--gold);
         }
 
         nav a {
-            color: white;
+            color: #e5e7eb;
             text-decoration: none;
-            padding: 16px 22px;
+            padding: 20px 25px;
             display: inline-block;
-            font-weight: bold;
+            font-weight: 500;
             text-transform: uppercase;
-            font-size: 0.95rem;
-            transition: background 0.3s ease;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            transition: all 0.3s ease;
         }
 
         nav a:hover {
-            background-color: #1B5E20;
+            color: var(--gold);
+            background-color: rgba(255, 255, 255, 0.02);
         }
 
-        /* Контейнер на съдържанието */
+        /* Основен Контейнер */
         .container {
-            max-width: 1140px;
-            margin: 30px auto;
-            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
 
-        /* Секции */
+        /* Секции с нов дизайн */
         section {
             background: white;
-            padding: 40px;
-            margin-bottom: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            scroll-margin-top: 70px;
+            padding: 60px;
+            margin-bottom: 50px;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            scroll-margin-top: 80px;
         }
 
         h2 {
-            color: #2E7D32;
-            font-size: 2rem;
+            color: var(--dark-grey);
+            font-size: 2.2rem;
+            font-weight: 400;
             margin-top: 0;
-            border-left: 6px solid #2E7D32;
-            padding-left: 15px;
+            margin-bottom: 30px;
             text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            padding-bottom: 15px;
         }
 
-        p {
-            font-size: 1.1rem;
-            color: #555;
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--gold);
         }
 
-        /* Решетка (Grid) за стаите */
+        .highlight {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        /* Луксозна Сетка за стаите (Grid) */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
 
         .card {
-            background: #fbfdfb;
-            border: 1px solid #e1e8e1;
-            border-radius: 10px;
+            background: white;
+            border-radius: 0;
             overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.02);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #eef0f1;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            border-color: var(--gold);
         }
 
         .card img {
             width: 100%;
-            height: 220px;
+            height: 240px;
             object-fit: cover;
+            filter: grayscale(10%);
+            transition: all 0.4s ease;
+        }
+
+        .card:hover img {
+            filter: grayscale(0%);
         }
 
         .card-content {
-            padding: 20px;
+            padding: 25px;
         }
 
         .card-content h3 {
-            color: #1B5E20;
+            color: var(--dark-grey);
             margin-top: 0;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
         }
 
-        /* Списъци с иконки за Басейна */
-        .features-list {
+        /* Модерна Релакс Зона */
+        .relax-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .spa-features {
             list-style: none;
             padding: 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
         }
 
-        .features-list li {
+        .spa-features li {
             font-size: 1.1rem;
-            background: #edf5ed;
-            padding: 12px 20px;
-            border-radius: 8px;
-            color: #2E7D32;
-            font-weight: 500;
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
         }
 
-        /* Таблица с цени */
+        .spa-features li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+
+        /* Изчистена Златна Таблица за Цени */
+        .table-wrapper {
+            overflow-x: auto;
+            margin-top: 30px;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 25px;
             background: white;
-            border-radius: 8px;
-            overflow: hidden;
         }
 
         th, td {
-            padding: 15px 20px;
-            border: 1px solid #eee;
+            padding: 18px 24px;
             text-align: left;
+            border-bottom: 1px solid #eef0f1;
             font-size: 1.05rem;
         }
 
         th {
-            background-color: #2E7D32;
+            background-color: var(--dark-grey);
             color: white;
-            font-weight: 600;
+            font-weight: 500;
             text-transform: uppercase;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            border-bottom: 3px solid var(--gold);
         }
 
-        tr:nth-child(even) {
-            background-color: #f9fdf9;
+        tr:hover {
+            background-color: #fbfbfc;
         }
 
         .price-tag {
-            font-weight: bold;
-            color: #2E7D32;
+            font-weight: 600;
+            color: var(--dark-grey);
+            border-left: 3px solid var(--gold);
+            padding-left: 10px;
         }
 
-        /* Контакти и Карта */
+        /* Секция Контакти */
         .contacts-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            align-items: center;
+            gap: 40px;
         }
 
-        @media (max-width: 768px) {
-            .contacts-wrapper { grid-template-columns: 1fr; }
-            header h1 { font-size: 2.3rem; }
+        .contact-info p {
+            margin-bottom: 20px;
         }
 
-        /* Долен колонтитул (Автори) */
+        /* Тъмен Футер с авторите */
         footer {
-            background-color: #1e241e;
-            color: #b0beb0;
+            background-color: var(--dark-grey);
+            color: #a0a5a9;
             text-align: center;
-            padding: 40px 20px;
-            margin-top: 60px;
-            font-size: 1rem;
-            border-top: 4px solid #2E7D32;
+            padding: 50px 20px;
+            margin-top: 80px;
+            border-top: 3px solid var(--gold);
         }
 
-        footer strong {
-            color: #ffffff;
-            display: block;
-            margin-bottom: 10px;
-            font-size: 1.2rem;
+        footer .project-title {
+            color: white;
+            font-size: 1.1rem;
             text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        footer .team-title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: var(--gold);
             letter-spacing: 1px;
+            margin-bottom: 5px;
         }
 
         footer .team-members {
-            color: #81C784;
-            font-size: 1.1rem;
-            font-weight: 500;
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        /* Адаптивност за телефони */
+        @media (max-width: 850px) {
+            .relax-container, .contacts-wrapper {
+                grid-template-columns: 1fr;
+            }
+            header h1 { font-size: 2.5rem; }
+            section { padding: 30px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Заглавна Секция -->
+    <!-- Елитен банер -->
     <header>
-        <h1>Семеен Хотел „Планински Рай“</h1>
-        <p>Лековити минерални извори и уют в сърцето на с. Шипково</p>
+        <h1>Хотел <span>Планински Рай</span></h1>
+        <p>Премиум Спа & Релакс • Сезон 2026</p>
     </header>
 
     <!-- Навигация -->
     <nav>
-        <a href="#about">За Нас</a>
-        <a href="#accommodation">Настаняване</a>
-        <a href="#relax">Релакс & Басейн</a>
-        <a href="#prices">Цени 2026</a>
+        <a href="#about">Концепция</a>
+        <a href="#accommodation">Стаи & Апартаменти</a>
+        <a href="#relax">Спа & Минерална Вода</a>
+        <a href="#prices">Цени</a>
         <a href="#contacts">Локация</a>
     </nav>
 
-    <!-- Основно Съдържание -->
     <div class="container">
         
-        <!-- Секция: За нас -->
+        <!-- Концепция -->
         <section id="about">
-            <h2>Добре дошли в Балкана</h2>
-            <p>Разположен на едно от най-живописните и панорамни места в курорта Шипковски минерални бани, <strong>Семеен хотел „Планински рай“</strong> предлага неповторимо бягство от стреса на големия град. Васильовският Балкан ще ви очарова с девствена природа, вековни гори и кристално чист планински въздух.</p>
-            <p>Хотелът съчетава перфектно традиционното българско гостоприемство с модерните удобства и лечебните свойства на местната минерална вода. Мястото е изключително подходящо както за спокойна семейна почивка, така и за организирани събития, купони и празнични срещи с приятели.</p>
+            <h2>Изживейте Спокойствието</h2>
+            <p>Разположен на уединено панорамно възвишение в прегръдката на Васильовския Балкан, семейният хотел <span class="highlight">„Планински рай“ (с. Шипково)</span> предефинира представата за планинска почивка. Нашата мисия е да съчетаем уединението на чистата природа с лечебната сила на минералните извори.</p>
+            <p>Тук времето забавя своя ход, за да ви позволи да се насладите на кристален въздух, първокласно гостоприемство и релаксиращи процедури през всеки сезон от годината.</p>
         </section>
 
-        <!-- Секция: Настаняване -->
+        <!-- Настаняване -->
         <section id="accommodation">
-            <h2>Видове Настаняване</h2>
-            <p>Всички стаи и апартаменти са обзаведени уютно и разполагат със самостоятелен санитарен възел, хладилник, телевизор с кабелна телевизия, безплатен Wi-Fi интернет и просторни тераси с разкошна панорама към планината.</p>
+            <h2>Пространства за Настаняване</h2>
+            <p>Всички стаи и апартаменти се отличават с модерен уют, тераси с вдъхновяваща планинска панорама, собствен санитарен възел, хладилник, телевизор с цифрова телевизия и високоскоростен Wi-Fi.</p>
             
             <div class="grid">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=600&q=80" alt="Уютна стая">
+                    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=600&q=80" alt="Елегантна стая">
                     <div class="card-content">
                         <h3>Двойни и Тройни Стаи</h3>
-                        <p>Идеално решение за двойки или семейства с малко дете. Комфорт, тишина и гарантиран релакс.</p>
+                        <p>Изискан интериор, проектиран за пълноценна почивка на двойки или малки семейства.</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=600&q=80" alt="Луксозен апартамент">
                     <div class="card-content">
-                        <h3>Комфортни Апартаменти</h3>
-                        <p>Предлагат се в три варианта (малък, среден и голям). Перфектни за хората, търсещи лукс, уединение и повече пространство.</p>
+                        <h3>Бутикови Апартаменти</h3>
+                        <p>Предлагани в малък, среден и голям вариант. Допълнителен простор и лукс за взискателни гости.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="Къща за гости Рай">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="Къща за гости">
                     <div class="card-content">
-                        <h3>Къща за гости „Рай“</h3>
-                        <p>Самостоятелна къща с общ капацитет до 10 места. Подходяща за големи компании, които искат самостоятелност.</p>
+                        <h3>Самостоятелна Къща „Рай“</h3>
+                        <p>Капацитет до 10 места. Изключителен избор за по-големи компании, търсещи дискретност.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Секция: Басейн и Релакс -->
+        <!-- Спа и Релакс -->
         <section id="relax">
-            <h2>Минерален Басейн и СПА Зона</h2>
-            <p>Курортът Шипково е световно известен със своите минерални извори, които лекуват редица заболявания. Семеен хотел „Планински рай“ пренася това богатство директно при своите гости:</p>
-            
-            <ul class="features-list">
-                <li>🌊 Голям външен минерален басейн (30 - 32°C)</li>
-                <li>👶 Детски минерален басейн (32 - 34°C)</li>
-                <li>🛁 Джакузи с гореща минерална вода</li>
-                <li>🧖 Парна баня и хидромасажна вана</li>
-                <li>⛱️ Безплатни шезлонги и чадъри за гостите</li>
-            </ul>
-            <p style="margin-top: 20px; font-style: italic; font-size: 1rem; color: #666;">*Забележка: Външните басейни работят активно през летния сезон (от юни до септември). Входът за външни посетители е 17.60 лв.</p>
-        </section>
-
-        <!-- Секция: Цени -->
-        <section id="prices">
-            <h2>Официални Цени - Сезон 2026</h2>
-            <p><em>Всички посочени цени са в лева, за помещение на вечер, и включват: нощувка, ползване на топъл минерален басейн, джакузи, шезлонг, чадър, паркинг, безжичен интернет (Wi-Fi), курортна такса и ДДС.</em></p>
-            
-            <table>
-                <thead>
-                    <tr>
-                        <th>Вид Помещение</th>
-                        <th>Капацитет</th>
-                        <th>Цена на Вечер</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Двойна стая</strong></td>
-                        <td>2-ма възрастни</td>
-                        <td class="price-tag">105.61 лв.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Тройна стая</strong></td>
-                        <td>3-ма възрастни</td>
-                        <td class="price-tag">140.82 лв.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Четворна стая</strong></td>
-                        <td>4-ма възрастни</td>
-                        <td class="price-tag">166.25 лв.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Малък Апартамент</strong></td>
-                        <td>2+2 души</td>
-                        <td class="price-tag">170.16 лв.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Среден Апартамент</strong></td>
-                        <td>3+2 души</td>
-                        <td class="price-tag">189.72 лв.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Голям Апартамент</strong></td>
-                        <td>4+2 души</td>
-                        <td class="price-tag">195.58 лв.</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p style="font-size: 0.95rem; color: #666; margin-top: 15px;">* Деца до 6 години се настаняват безплатно (без допълнително легло). Допълнително легло за по-големи деца или възрастни се доплаща 25.00 лв. на ден.</p>
-        </section>
-
-        <!-- Секция: Контакти -->
-        <section id="contacts">
-            <h2>Контакти & Локация</h2>
-            <div class="contacts-wrapper">
+            <h2>Балнеология & Термална Зона</h2>
+            <div class="relax-container">
                 <div>
-                    <p><strong>📍 Адрес:</strong> Курорт „Шипковски минерални бани“, с. Шипково, Община Троян, България</p>
-                    <p><strong>🚗 Паркинг:</strong> Хотелът разполага със собствен, безплатен и денонощно охраняем паркинг за своите гости.</p>
-                    <p><strong>🌳 Наблизо:</strong> В района можете да посетите Троянския манастир, Националното изложение на занаятите в Орешак и множество планински екопътеки.</p>
+                    <p>Шипковските минерални извори са прочути в цяла Европа със своите силни лечебни и възстановяващи свойства. „Планински рай“ интегрира това природно богатство в модерната си уелнес зона:</p>
+                    <ul class="spa-features">
+                        <li>Външен топъл минерален басейн (температура 30 - 32°C)</li>
+                        <li>Обезопасен детски термален басейн (32 - 34°C)</li>
+                        <li>Хидромасажно джакузи с гореща минерална вода</li>
+                        <li>Дълбоко отпускаща парна баня и термо-вана</li>
+                    </ul>
                 </div>
                 <div>
-                    <!-- Интерактивна Google Карта -->
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2930.345686036814!2d24.4170366!3d42.8444391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a9939fd9ca3059%3A0x6b4fb7cb1559be6d!2z0KXQvtGC0LXQuyAi0J_Qu9Cw0L3QuNC90bA50LrQuCDRgNCw0Lki!5e0!3m2!1sbg!2sbg!4v1710000000000!5m2!1sbg!2sbg" width="100%" height="320" style="border:0; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);" allowfullscreen="" loading="lazy"></iframe>
+                    <p style="border-left: 2px solid var(--gold); padding-left: 20px; font-style: italic; background-color: #fafafa; padding: 20px;">
+                        * Външните водни съоръжения са отворени от юни до септември. Хотелът приема и външни посетители за басейна срещу еднократен вход от 17.60 лв., включващ шезлонг и чадър.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Цени -->
+        <section id="prices">
+            <h2>Ценова Листа • Сезон 2026</h2>
+            <p style="margin-bottom: 25px; color: #7f8c8d;">Всички цени са в лева за цялото помещение (на вечер) и включват достъп до минералните басейни, джакузи, шезлонг, подсигурен паркинг, Wi-Fi и туристически такси.</p>
+            
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Тип Помещение</th>
+                            <th>Стандартен Капацитет</th>
+                            <th>Цена на Нощувка</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Двойна стая</strong></td>
+                            <td>2 възрастни</td>
+                            <td class="price-tag">105.61 лв.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Тройна стая</strong></td>
+                            <td>3 възрастни</td>
+                            <td class="price-tag">140.82 лв.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Четворна стая</strong></td>
+                            <td>4 възрастни</td>
+                            <td class="price-tag">166.25 лв.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Малък Апартамент</strong></td>
+                            <td>2+2 души</td>
+                            <td class="price-tag">170.16 лв.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Среден Апартамент</strong></td>
+                            <td>3+2 души</td>
+                            <td class="price-tag">189.72 лв.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Голям Апартамент</strong></td>
+                            <td>4+2 души</td>
+                            <td class="price-tag">195.58 лв.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="font-size: 0.9rem; color: #7f8c8d; margin-top: 20px;">* Деца до 6 години се настаняват безплатно без допълнително легло. Доплащането за допълнително легло е 25.00 лв. на ден.</p>
+        </section>
+
+        <!-- Контакти -->
+        <section id="contacts">
+            <h2>Локация & Информация</h2>
+            <div class="contacts-wrapper">
+                <div class="contact-info">
+                    <p><strong>📍 Локация:</strong> Курорт „Шипковски минерални бани“, с. Шипково, Община Троян, България</p>
+                    <p><strong>🚗 Достъп:</strong> На разположение на гостите има безплатен, денонощно достъпен паркинг директно пред комплекса.</p>
+                    <p><strong>🌲 Туризъм:</strong> Локацията позволява бърз достъп до забележителности като Троянския манастир, занаятчийското изложение в Орешак и множество маркирани екопътеки в Стара Планина.</p>
+                </div>
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2930.345686036814!2d24.4170366!3d42.8444391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a9939fd9ca3059%3A0x6b4fb7cb1559be6d!2z0KXQvtGC0LXQuyAi0J_Qu9Cw0L3QuNC90bA50LrQuCDRgNCw0Lki!5e0!3m2!1sbg!2sbg!4v1710000000000!5m2!1sbg!2sbg" width="100%" height="320" style="border:0; filter: contrast(95%) grayscale(5%); border-radius: 2px;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </section>
 
     </div>
 
-    <!-- Долен колонтитул с имената на екипа -->
+    <!-- Луксозен Футер с вашия екип -->
     <footer>
-        <strong>Проект по Компютърни Технологии / ИТ</strong>
-        <p>Разработен и пресъздаден от екип в състав:</p>
+        <div class="project-title">Проект по Компютърни Технологии</div>
+        <div class="team-title">Автори на разработката:</div>
         <div class="team-members">
-            Данаил Русев, Георги Славков, Андрей Иванов, Виктория Шопова
+            Данаил Русев • Георги Славков • Андрей Иванов • Виктория Шопова
         </div>
-        <p style="font-size: 0.85rem; color: #556355; margin-top: 20px;">© 2026 Всички права върху информацията принадлежат на семеен хотел „Планински рай“.</p>
+        <p style="font-size: 0.8rem; color: #64696d; margin-top: 30px;">© 2026 Всички права над оригиналните данни и дестинацията принадлежат на семеен хотел „Планински рай“.</p>
     </footer>
 
 </body>
