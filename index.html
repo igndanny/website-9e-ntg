@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wellness Хотел „Планински Рай“</title>
+    <title>Хотел „Планински Рай“ - 9е</title>
     <style>
-        /* Базови Настройки и Модерни Шрифтове */
+        /* Базови Настройки в стил MetaMask (Web3 / Premium UI) */
         :root {
+            --bg-main: #1e2225;       /* Дълбок тъмен фон тип MetaMask */
+            --bg-card: #ffffff;       /* Чисто бели изпъкващи контейнери */
             --dark-grey: #23272a;
-            --light-grey: #f4f5f6;
+            --text-color: #3f4448;
+            --text-light: #9fa6ae;
             --gold: #c5a880;
             --gold-hover: #b39369;
-            --text-color: #3f4448;
+            --border-radius: 16px;    /* Модерни, силно заоблени ъгли */
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Мазна анимация */
         }
 
         body {
@@ -19,16 +23,16 @@
             margin: 0;
             padding: 0;
             color: var(--text-color);
-            background-color: var(--light-grey);
+            background-color: var(--bg-main);
             line-height: 1.7;
         }
 
-        /* Луксозен Банер - Естествена снимка в сиво и златно */
+        /* Премиум Банер */
         header {
-            background: linear-gradient(rgba(35, 39, 42, 0.5), rgba(35, 39, 42, 0.6)), url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(30, 34, 37, 0.5), rgba(30, 34, 37, 0.7)), url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
             color: white;
             text-align: center;
-            padding: 170px 20px;
+            padding: 180px 20px;
             letter-spacing: 2px;
         }
 
@@ -42,64 +46,72 @@
         header h1 span {
             font-weight: 600;
             color: var(--gold);
+            text-shadow: 0 4px 20px rgba(197, 168, 128, 0.2);
         }
 
         header p {
             font-size: 1.2rem;
             margin-top: 20px;
             text-transform: uppercase;
-            color: #d1d5db;
+            color: var(--text-light);
             letter-spacing: 4px;
         }
 
-        /* Минималистично Меню */
+        /* Навигация с MetaMask ефект (Залепващо меню) */
         nav {
-            background-color: var(--dark-grey);
+            background-color: rgba(30, 34, 37, 0.85);
+            backdrop-filter: blur(12px); /* Модерен стъклен ефект */
             position: sticky;
             top: 0;
             z-index: 1000;
             text-align: center;
-            border-bottom: 2px solid var(--gold);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 5px 0;
         }
 
         nav a {
-            color: #e5e7eb;
+            color: #d1d5db;
             text-decoration: none;
-            padding: 20px 25px;
+            padding: 18px 25px;
             display: inline-block;
             font-weight: 500;
             text-transform: uppercase;
             font-size: 0.85rem;
             letter-spacing: 1.5px;
-            transition: all 0.3s ease;
+            transition: var(--transition);
+            border-radius: 8px;
+            margin: 0 5px;
         }
 
         nav a:hover {
             color: var(--gold);
-            background-color: rgba(255, 255, 255, 0.02);
+            background-color: rgba(255, 255, 255, 0.05);
+            transform: translateY(-2px);
         }
 
         /* Основен Контейнер */
         .container {
-            max-width: 1200px;
+            max-width: 1140px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 60px 20px;
         }
 
-        /* Секции */
+        /* Модерни MetaMask Секции */
         section {
-            background: white;
-            padding: 60px;
-            margin-bottom: 50px;
-            border-radius: 4px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-            scroll-margin-top: 80px;
+            background: var(--bg-card);
+            padding: 50px;
+            margin-bottom: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            scroll-margin-top: 100px;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.03);
         }
 
         h2 {
             color: var(--dark-grey);
             font-size: 2.2rem;
-            font-weight: 400;
+            font-weight: 500;
             margin-top: 0;
             margin-bottom: 30px;
             text-transform: uppercase;
@@ -113,9 +125,10 @@
             position: absolute;
             left: 0;
             bottom: 0;
-            width: 60px;
-            height: 3px;
+            width: 50px;
+            height: 4px;
             background-color: var(--gold);
+            border-radius: 2px;
         }
 
         .highlight {
@@ -123,25 +136,25 @@
             font-weight: 600;
         }
 
-        /* Сетка за стаите (Оригинални цветове на снимките) */
+        /* Сетка за стаите с плавна 3D анимация */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
 
         .card {
-            background: white;
-            border-radius: 0;
+            background: #fdfdfd;
+            border-radius: var(--border-radius);
             overflow: hidden;
             border: 1px solid #eef0f1;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: var(--transition);
         }
 
         .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
             border-color: var(--gold);
         }
 
@@ -149,6 +162,7 @@
             width: 100%;
             height: 240px;
             object-fit: cover;
+            transition: var(--transition);
         }
 
         .card-content {
@@ -159,11 +173,10 @@
             color: var(--dark-grey);
             margin-top: 0;
             font-size: 1.3rem;
-            font-weight: 500;
-            letter-spacing: 0.5px;
+            font-weight: 600;
         }
 
-        /* Модерна Релакс Зона */
+        /* Релакс Зона */
         .relax-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -191,10 +204,12 @@
             font-size: 1.2rem;
         }
 
-        /* Златна Таблица за Цени */
+        /* Луксозна Таблица за Цени */
         .table-wrapper {
             overflow-x: auto;
             margin-top: 30px;
+            border-radius: 12px;
+            border: 1px solid #eef0f1;
         }
 
         table {
@@ -204,7 +219,7 @@
         }
 
         th, td {
-            padding: 18px 24px;
+            padding: 20px 24px;
             text-align: left;
             border-bottom: 1px solid #eef0f1;
             font-size: 1.05rem;
@@ -217,21 +232,38 @@
             text-transform: uppercase;
             font-size: 0.85rem;
             letter-spacing: 1px;
-            border-bottom: 3px solid var(--gold);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
         }
 
         tr:hover {
-            background-color: #fbfbfc;
+            background-color: #f8f9fa;
         }
 
-        .price-tag {
+        /* Двоен таг за цената (BGN / EUR) */
+        .price-container {
+            display: flex;
+            flex-direction: column;
+            border-left: 3px solid var(--gold);
+            padding-left: 12px;
+        }
+
+        .price-bgn {
             font-weight: 600;
             color: var(--dark-grey);
-            border-left: 3px solid var(--gold);
-            padding-left: 10px;
+            font-size: 1.1rem;
         }
 
-        /* Секция Контакти и Дизайнерски контейнер за Картата */
+        .price-eur {
+            font-size: 0.9rem;
+            color: #8a929a;
+            font-weight: 400;
+            margin-top: 2px;
+        }
+
+        /* Карта с MetaMask Floating Ефект */
         .contacts-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -241,30 +273,36 @@
 
         .map-container {
             border: 1px solid #eef0f1;
-            border-left: 4px solid var(--gold);
-            padding: 10px;
+            padding: 8px;
             background: #ffffff;
-            border-radius: 6px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .map-container:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 25px 50px rgba(197, 168, 128, 0.15);
+            border-color: var(--gold);
         }
 
         .map-container iframe {
             display: block;
-            border-radius: 4px;
+            border-radius: 10px;
         }
 
         .contact-info p {
             margin-bottom: 20px;
         }
 
-        /* Тъмен Футер с авторите */
+        /* Тъмен Текстуриран Футер */
         footer {
-            background-color: var(--dark-grey);
-            color: #a0a5a9;
+            background-color: #1a1d20;
+            color: var(--text-light);
             text-align: center;
-            padding: 50px 20px;
-            margin-top: 80px;
-            border-top: 3px solid var(--gold);
+            padding: 60px 20px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         footer .project-title {
@@ -280,29 +318,30 @@
             text-transform: uppercase;
             color: var(--gold);
             letter-spacing: 1px;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
 
         footer .team-members {
             color: #ffffff;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 300;
             letter-spacing: 0.5px;
         }
 
-        /* Адаптивност за телефони */
+        /* Адаптивност за мобилни телефони */
         @media (max-width: 850px) {
             .relax-container, .contacts-wrapper {
                 grid-template-columns: 1fr;
             }
             header h1 { font-size: 2.5rem; }
             section { padding: 30px; }
+            nav a { padding: 12px 15px; font-size: 0.75rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Елитен банер с нова, истинска златно-сива планинска снимка -->
+    <!-- Банер -->
     <header>
         <h1>Хотел <span>Планински Рай</span></h1>
         <p>Премиум Спа & Релакс • Сезон 2026</p>
@@ -311,8 +350,8 @@
     <!-- Навигация -->
     <nav>
         <a href="#about">Концепция</a>
-        <a href="#accommodation">Стаи & Апартаменти</a>
-        <a href="#relax">Спа & Минерална Вода</a>
+        <a href="#accommodation">Стаи</a>
+        <a href="#relax">Уелнес</a>
         <a href="#prices">Цени</a>
         <a href="#contacts">Локация</a>
     </nav>
@@ -326,7 +365,7 @@
             <p>Тук времето забавя своя ход, за да ви позволи да се насладите на кристален въздух, първокласно гостоприемство и релаксиращи процедури през всеки сезон от годината.</p>
         </section>
 
-        <!-- Настаняване (Върнати оригинални цветове) -->
+        <!-- Настаняване -->
         <section id="accommodation">
             <h2>Пространства за Настаняване</h2>
             <p>Всички стаи и апартаменти се отличават с модерен уют, тераси с вдъхновяваща планинска панорама, собствен санитарен възел, хладилник, телевизор с цифрова телевизия и високоскоростен Wi-Fi.</p>
@@ -370,17 +409,17 @@
                     </ul>
                 </div>
                 <div>
-                    <p style="border-left: 2px solid var(--gold); padding-left: 20px; font-style: italic; background-color: #fafafa; padding: 20px;">
-                        * Външните водни съоръжения са отворени от юни до септември. Хотелът приема и външни посетители за басейна срещу еднократен вход от 17.60 лв., включващ шезлонг и чадър.
+                    <p style="border-left: 3px solid var(--gold); padding-left: 20px; font-style: italic; background-color: #f8f9fa; padding: 25px; border-radius: 8px;">
+                        * Външните водни съоръжения са отворени от юни до септември. Хотелът приема и външни посетители за басейна срещу еднократен вход от 17.60 лв. (€9.00), включващ шезлонг и чадър.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Цени -->
+        <!-- Цени (Обновени в ЛВ и ЕВРО) -->
         <section id="prices">
             <h2>Ценова Листа • Сезон 2026</h2>
-            <p style="margin-bottom: 25px; color: #7f8c8d;">Всички цени са в лева за цялото помещение (на вечер) и включват достъп до минералните басейни, джакузи, шезлонг, подсигурен паркинг, Wi-Fi и туристически такси.</p>
+            <p style="margin-bottom: 25px; color: #727b84;">Всички цени са за цялото помещение (на вечер) и включват достъп до минералните басейни, джакузи, шезлонг, подсигурен паркинг, Wi-Fi и туристически такси.</p>
             
             <div class="table-wrapper">
                 <table>
@@ -388,47 +427,77 @@
                         <tr>
                             <th>Тип Помещение</th>
                             <th>Стандартен Капацитет</th>
-                            <th>Цена на Нощувка</th>
+                            <th>Цена на Нощувка (ЛВ / EUR)</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><strong>Двойна стая</strong></td>
                             <td>2 възрастни</td>
-                            <td class="price-tag">105.61 лв.</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price-bgn">105.61 лв.</span>
+                                    <span class="price-eur">€54.00</span>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td><strong>Тройна стая</strong></td>
                             <td>3 възрастни</td>
-                            <td class="price-tag">140.82 лв.</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price-bgn">140.82 лв.</span>
+                                    <span class="price-eur">€72.00</span>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td><strong>Четворна стая</strong></td>
                             <td>4 възрастни</td>
-                            <td class="price-tag">166.25 лв.</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price-bgn">166.25 лв.</span>
+                                    <span class="price-eur">€85.00</span>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td><strong>Малък Апартамент</strong></td>
                             <td>2+2 души</td>
-                            <td class="price-tag">170.16 лв.</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price-bgn">170.16 лв.</span>
+                                    <span class="price-eur">€87.00</span>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td><strong>Среден Апартамент</strong></td>
                             <td>3+2 души</td>
-                            <td class="price-tag">189.72 лв.</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price-bgn">189.72 лв.</span>
+                                    <span class="price-eur">€97.00</span>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td><strong>Голям Апартамент</strong></td>
                             <td>4+2 души</td>
-                            <td class="price-tag">195.58 лв.</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price-bgn">195.58 лв.</span>
+                                    <span class="price-eur">€100.00</span>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <p style="font-size: 0.9rem; color: #7f8c8d; margin-top: 20px;">* Деца до 6 години се настаняват безплатно без допълнително легло. Доплащането за допълнително легло е 25.00 лв. на ден.</p>
+            <p style="font-size: 0.9rem; color: #727b84; margin-top: 20px;">* Деца до 6 години се настаняват безплатно без допълнително легло. Доплащането за допълнително легло е 25.00 лв. (€12.78) на ден.</p>
         </section>
 
-        <!-- Контакти с новата луксозна рамка на картата -->
+        <!-- Контакти -->
         <section id="contacts">
             <h2>Локация & Информация</h2>
             <div class="contacts-wrapper">
@@ -445,14 +514,14 @@
 
     </div>
 
-    <!-- Луксозен Футер с вашия екип -->
+    <!-- Футер -->
     <footer>
         <div class="project-title">Проект по Компютърни Технологии</div>
         <div class="team-title">Автори на разработката:</div>
         <div class="team-members">
             Данаил Русев • Георги Славков • Андрей Иванов • Виктория Шопова
         </div>
-        <p style="font-size: 0.8rem; color: #64696d; margin-top: 30px;">© 2026 Всички права над оригиналните данни и дестинацията принадлежат на семеен хотел „Планински рай“.</p>
+        <p style="font-size: 0.8rem; color: #50565b; margin-top: 30px;">© 2026 Всички права над оригиналните данни и дестинацията принадлежат на семеен хотел „Планински рай“.</p>
     </footer>
 
 </body>
